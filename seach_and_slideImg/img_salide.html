@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    #saz {
+      font-size: 50px;
+      /* border: 2px solid; */
+      text-align: center;
+      
+
+    }
+
+    #slider {
+      position: relative;
+      height: 950px;
+      /* border: 2px solid; */
+
+    }
+
+    #allimg {
+      position: relative;
+      height: 100%;
+      /* border: 2px solid red; */
+      /* display: none; */
+
+    }
+
+    .images {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      /* 
+            border: 2px solid green; */
+      position: absolute;
+
+    }
+
+    .btn {
+      margin-top: 450px;
+      display: flex;
+      position: absolute;
+      font-size: 40px;
+      background-color: rgba(174, 169, 169, 0.599);
+      outline-color: none;
+      color: white;
+      border: 2px;
+      border-radius: 5px;
+
+
+
+    }
+
+    .right {
+      right: 0px;
+
+    }
+
+    #alldot {
+      width: 100%;
+      height: 50px;
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      text-align: center;
+      justify-content: center;
+      /* border: 2px solid; */
+    }
+
+    .dot {
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      text-align: center;
+      border: 2px solid gray;
+      border-radius: 50%;
+      background-color: gray;
+
+    }
+
+    .dot:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      border: 2px solid rgb(246, 242, 242);
+      background-color: rgb(246, 242, 242);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      /* display: none; */
+
+    }
+
+    #search_fulter {
+      width: 100%;
+      height: 200px;
+
+      margin-top: 50px;
+      /* border: 2px solid rgb(49, 172, 27); */
+      overflow: hidden;
+      text-align: center;
+
+    }
+
+    #search {
+      padding: 10px;
+      width: 30%;
+      border: 2px;
+      border-radius: 5px;
+      /* box-shadow: 5px 5px 0.06 rgb(252, 13, 13); */
+      outline: none;
+
+      font-size: 20px;
+
+    }
+
+    #search_btn {
+      width: 10%;
+      padding: 10px;
+      background-color: green;
+      border: 2px;
+      border-radius: 5px;
+      outline-color: none;
+      cursor: pointer;
+      font-size: 20px;
+
+
+    }
+
+    #search_btn:hover {
+      background-color: aqua;
+      outline-color: aqua;
+    }
+
+
+
+    #myUL {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      margin-top: 2px;
+      /* border: 2px solid rgb(190, 138, 138); */
+      /* text-align: center; */
+      margin-left: 30%;
+      width: 30%;
+      position: relative;
+
+
+      
+      
+     
+    }
+
+    #myUL li a {
+      border: 1px solid #ddd;
+      margin-top: -1px;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      text-align: start;
+      background-color: #f6f6f6;
+      padding: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      color: black;
+      display: block;
+     
+      
+
+
+
+      
+      
+    }
+    li{
+      display: none;
+      
+    }
+
+    #myUL li a:hover:not(.header) {
+      background-color: #eee;
+    }
+
+    #time{
+      position: relative;
+    }
+
+    @media only screen and (max-width: 400px) {
+      #slider{
+        height: 500px;
+      }
+      .btn{
+        margin-top: 250px;
+
+      }
+
+      #search_fulter{
+        text-align: start;
+        height: 160px;
+       
+      }
+      #search{
+        width: 60%;
+        margin-left: 30px;
+
+
+      }
+
+      #search_btn{
+        width: 20%;
+
+      }
+
+
+      #myUL{
+        text-align: none;
+        margin-left: 30px;
+        width: 60%;
+
+
+
+      }
+
+      #footer{
+       width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    border: 2px solid black;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    align-items: center;
+      }
+      .footer_data{
+        width: 100%;
+        
+
+      }
+      #fimg{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  
+
+    }
+
+#footer{
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    font-size: 20px;
+    border: 2px solid black;
+    display: flex;
+    gap: 20px;
+    
+
+
+}
+
+.footer_data{
+  width:24%;
+  height: 100%;
+  text-align: center;
+  margin-top: 10px;
+  
+
+}
+
+#fimg{
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+
+
+}
+.flink{
+    display: block;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+
+
+}
+.flink:hover{
+    color: green;
+}
+hr{
+    color: rgb(201, 200, 200);
+    margin-top: 20px;
+
+}
+
+
+#insta_feture{
+  width: 80%;
+  height: 600px;
+  margin: 0 auto;
+  /* border: 2px solid; */
+  display: flex;
+  gap: 50px;
+
+ }
+
+ .id{
+   width: 100%; 
+  height: 100%;
+  border: 2px solid rgba(238, 236, 236, 0.302) ;
+ 
+  border-radius: 8px;
+
+ }
+
+ .id_img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  
+ }
+.inst_name{
+  text-align: center;
+  color: red;
+  font-size: 30px;
+
+
+}
+
+.inta_btn{
+  width: 50%;
+  padding: 10px;
+  margin: 20px 100px;
+  align-items: center;
+  border-radius: 8px ;
+  font-size: 20px;
+
+
+
+  
+}
+  </style>
+</head>
+
+<body>
+
+
+  <div id="search_fulter">
+
+    <input id="search" type="text" placeholder="search items"  onkeyup="sarfaraz()" >
+    <button id="search_btn"> search </button>
+    <ul id="myUL">
+      <li><a href="#">Adele</a></li>
+      <li><a href="#">Agnes</a></li>
+      <li><a href="#">Billy</a></li>
+      <li><a href="#">Bob</a></li>
+      <li><a href="#">Calvin</a></li>
+      <li><a href="#">Christina</a></li>
+      <li><a href="#">Cindy</a></li>
+
+      <li><a href="#">sarfaraz alam</a></li>
+      <li><a href="#">shahbaz alam </a></li>
+      <li><a href="#">nayaz alam </a></li>
+      <li><a href="#">meraj alam </a></li>
+      <li><a href="#">siraz alam </a></li>
+      <li><a href="https://source.unsplash.com/random/?funny man,4k"> hassan</a></li>
+      <li><a href="https://source.unsplash.com/random/?happy man-with-one-eye-open,4k"> smeer  </a></li>
+      <li><a href="#">rio </a></li>
+      <li><a href="#">rio coder  </a></li>
+      <li><a href="https://i.pinimg.com/736x/a7/02/6a/a7026acccaa4195d4c2b080010c6af35.jpg">monu </a></li>
+      <li><a href="https://t3.ftcdn.net/jpg/02/95/44/22/360_F_295442295_OXsXOmLmqBUfZreTnGo9PREuAPSLQhff.jpg">shoib  </a></li>
+
+      <li><a href="https://source.unsplash.com/random/?Funny man muscles,4k"> surya </a></li>
+      <li><a href="https://source.unsplash.com/random/?happy man-with-sad,4k">harish </a></li>
+      <li><a href="https://source.unsplash.com/random/?funny,4k">vishal  </a></li>
+      <li><a href="https://source.unsplash.com/random/?funny boxer,4k">sachin </a></li>
+      <li><a href="https://source.unsplash.com/random/?Funny Old Guy,4k"> priyanshu.. </a></li>
+      <li><a href="https://source.unsplash.com/random/?Funny Guy,4k">khan zaid</a></li>
+      <li><a href="https://source.unsplash.com/random/?Funny insta_feture,4k">sharik  </a></li>
+
+      <li><a href="https://source.unsplash.com/random/?Pin on Funny Halloween Costumes,4k">badshah </a></li>
+      <li><a href="#">c </a></li>
+      <li><a href="#">c++ </a></li>
+      <li><a href="#">java </a></li>
+      <li><a href="#">javascript </a></li>
+      <li><a href="#">python</a></li>
+      <li><a href="#">data structer  </a></li>
+
+      <li><a href="#">flutter</a></li>
+      <li><a href="#">php </a></li>
+      <li><a href="#">my sql </a></li>
+      <li><a href="#">html5 </a></li>
+      <li><a href="#">Css3 </a></li>
+      <li><a href="#">react js</a></li>
+      <li><a href="#">angular  </a></li>
+
+      <li><a href="#">node jS</a></li>
+      <li><a href="#">express js </a></li>
+      <li><a href="#">mongo db </a></li>
+      <li><a href="#">maths </a></li>
+      <li><a href="#">boost stape </a></li>
+      <li><a href="#"> haking </a></li>
+      <li><a href="#"> kali linux ...  </a></li>
+
+    </ul>
+
+
+
+
+  </div>
+
+<div id="time">
+  <p id="saz">hellow</p>
+</div>
+  <div id="slider">
+    <div id="allimg">
+      <div class="images"> <img
+          src="https://img.freepik.com/photos-premium/joli-garcon-blanc-6-ans-habille-enseignant-travaillant-son-lieu-travail_483949-11639.jpg"
+          alt="1"></div>
+      <div class="images"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="2"></div>
+      <div class="images"><img
+          src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+          alt="3"></div>
+      <div class="images"><img
+          src="https://imgv3.fotor.com/images/slider-image/a-man-holding-a-camera-with-image-filter.jpg" alt="4"></div>
+      <div class="images"><img
+          src="https://img.freepik.com/photos-premium/joli-garcon-blanc-6-ans-habille-enseignant-travaillant-son-lieu-travail_483949-11603.jpg"
+          alt="4"></div>
+      <div class="images"><img
+          src="https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg"
+          alt="6"></div>
+
+      <button class="btn left" onclick="prev(-1)">
+        < </button>
+          <button class="btn right" onclick="next(1)"> > </button>
+    </div>
+  </div>
+
+
+  <div id="alldot">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+
+  </div>
+
+
+  <div id="insta_feture">
+
+    <div class="id">
+      <img class="id_img" src="https://source.unsplash.com/random/?male,4k" alt="">
+      <h2 class="inst_name"> Lucxama Sylvain </h2>
+      <button class="inta_btn" onclick="follow_unfollow()" > Follow</button>
+    </div>
+
+    </div> <hr>
+
+  <div id="footer">
+
+    <div class="footer_data"> <img id="fimg" src="https://static.vecteezy.com/system/resources/thumbnails/009/118/743/small/rio-logo-rio-letter-rio-letter-logo-design-initials-rio-logo-linked-with-circle-and-uppercase-monogram-logo-rio-typography-for-technology-business-and-real-estate-brand-vector.jpg" alt=""></div>
+    <div class="footer_data">
+       <li class="flink">  <a class="flink" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRbAJ2JptRFWKxrWszitbv9EZdwsTkKZ4R9Ce2xuPZT9NmOSh73PSam8vPq0c7qfIm78A&usqp=CAU">Rio</a></li>
+       <li class="flink">  <a class="flink" href="https://static6.depositphotos.com/1000350/593/i/450/depositphotos_5932495-stock-photo-crazy-man-showing-his-thumb.jpg">surya</a></li>
+       <li class="flink">  <a class="flink" href="https://img.freepik.com/free-photo/funny-man-pointing-finger-camera_1301-1460.jpg?w=2000">Harish</a></li>
+       <li class="flink">  <a class="flink" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgyt4fHLo6zhhrZHWM0UKBuCqZokx4dEb22e-YFF7hM1kcIsb6UIFxcrf8QLsOnCbK8Y8&usqp=CAU">Vishal </a></li>
+
+    </div>
+    <div class="footer_data">
+        <li class="flink">  <a class="flink" href="https://media.istockphoto.com/id/507547485/vector/funny-man.jpg?s=1024x1024&w=is&k=20&c=V0YqWcO8DrrK-c84nYF-ur_M50HaFC5gx_4NGbNrzD4=">zaid</a></li>
+       <li class="flink">  <a class="flink" href="https://media.istockphoto.com/id/153770987/vector/man-with-one-eye-open.jpg?s=1024x1024&w=is&k=20&c=9-y4KzLMc1ULZSuLQHs6JpSQEFzNbyNuOibzOZhZbUs=">sharik</a></li>
+       <li class="flink">  <a class="flink" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2q4xjzMKkHMv1K8bMpUPYEJMKItU9OCh3rHkhgKp36u5EXxEHV__GSaqHhqTdvydI0LI&usqp=CAU">Hassan</a></li>
+       <li class="flink">  <a class="flink" href="https://thumbs.dreamstime.com/z/funny-man-posing-shirtless-showing-his-body-isolated-white-background-32515477.jpg">Priyanshu </a></li>
+
+    </div>
+    <!-- <div class="footer_data">
+        
+    </div> 
+     -->
+
+  </div>
+
+  <p style="text-align: center; margin-top: 10px; font-size: 20px;"> @ copyRight 2023-2024</p>
+
+
+
+
+  <script >
+    // time
+setInterval(function myfun() {
+  let date = new Date();
+  const data1 = (document.getElementById("saz").innerHTML =
+    date.toLocaleTimeString());
+}, 1000);
+
+// slider image
+let indexvalue = 0;
+
+function prev(x) {
+  indexvalue = indexvalue - x;
+  console.log(x);
+  slider_img();
+}
+
+function next(x) {
+  indexvalue = indexvalue + x;
+  console.log(indexvalue);
+  slider_img();
+}
+
+let m;
+
+//slider image
+slider_img();
+
+function slider_img() {
+  let slides = document.getElementsByClassName("images");
+
+  if (indexvalue === 6) {
+    indexvalue = 0;
+  }
+
+  if (indexvalue < 0) {
+    indexvalue = 6;
+  }
+
+  for (let y of slides) {
+    y.style.display = "none";
+  }
+
+  slides[indexvalue].style.display = "block";
+}
+
+// event listner on slider container :
+const slider_container = document.getElementById("allimg");
+console.log(slider_container);
+
+slider_container.addEventListener("click", () => {});
+
+// searching method :-
+
+function sarfaraz() {
+  const search_value = document.getElementById("search").value.toUpperCase();
+  const ul_data = document.querySelector("#myUL");
+  const li_data = document.getElementsByTagName("li");
+
+  for (let i = 0; i < li_data.length; i++) {
+    let a = li_data[i].getElementsByTagName("a")[0].textContent || innerText;
+
+    if (a.toUpperCase().indexOf(search_value) > -1) {
+      li_data[i].style.display = "block";
+    } else {
+      li_data[i].style.display = "none";
+    }
+  }
+}
+
+
+
+
+const text_data = document.querySelector("h2");
+const btn = document.querySelector(".inta_btn");
+let in_val =0;
+
+function follow_unfollow(){
+
+if(in_val == 0){
+  text_data.style.color = "green";
+  btn.innerHTML="UnFollow";
+  in_val = 1
+  console.log(in_val)
+ 
+}
+else{
+  text_data.style.color = "red";
+  btn.innerHTML="Follow";
+  in_val = 0
+}
+  
+};
+
+  </script>
+</body>
+
+</html>
