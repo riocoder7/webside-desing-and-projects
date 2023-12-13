@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagrame ..</title>
+    <!-- <link rel="stylesheet" href="insta_feyure.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    background-color: black;
+
+
+
+}
+
+#main{
+    width: 100%;
+    height: 200vh;
+    background-color: black;
+    /* border: 2px solid green; */
+
+}
+
+#card{
+    width: 95%;
+    height: 900px;
+    margin-left: 50px;
+    /* border: 2px solid red; */
+    border-radius: 8px;
+    position: relative;
+
+
+
+    
+
+  
+}
+
+#story{
+    width: 100%;
+    height: 200px;
+    /* border: 2px solid red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+  
+}
+
+#story::-webkit-scrollbar{
+    display: none;
+
+}
+
+.box{
+    margin: 20px 0px;
+    width: 150px;
+    height: 150px;
+    border: 2px solid pink;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 10px;
+    
+}
+
+hr{
+    color:#dddd;
+
+    
+}
+
+h2{
+    display: inline-block;
+    margin-left: 55px;
+
+
+
+
+}
+
+.box_image{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+
+#feed{
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+    /* border: 2px solid green; */
+
+}
+
+.feed_div{
+    width: 30%;
+    height: 100%;
+    border: 2px solid rgba(171, 171, 171, 0.631);
+    float: left;
+    margin-left: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 6px 10px rgba(0, 0, blue, alpha);
+    margin-top: 20px;
+    
+
+}
+
+
+#story_img{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid white; */
+    /* background-color: yellow; */
+    object-position: center;
+    object-fit: cover;
+    background-size: cover;
+
+    border-radius: 8px;
+    position: absolute;
+    display: none;
+    background-repeat: no-repeat;
+    
+
+
+}
+
+.feed_img{ 
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-fit:cover ;
+    border-radius: 8px;
+   
+
+
+}
+
+.saz{
+    float: left;
+    font-size: 35px;
+    margin-left: 20px;
+    margin-top:20px;
+
+
+
+
+
+
+}
+
+
+button{
+    width: 60%;
+    padding: 5px;
+    margin-left: 40px;
+    border: 2px solid green;
+    border-radius:8px;
+    font-size: 25px;
+    background-color: rgb(17, 234, 93);
+    margin-top: 20px;
+
+
+}
+
+@media only screen and (max-width: 600px){
+    #card{
+        width: 100%;
+        height: 1500px;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-right: 1px;
+
+        
+
+
+
+
+    }
+
+    .box{
+        width: 60px;
+        height: 60px;
+
+    }
+
+    #story_img{
+        height: 800px;
+    }
+   
+    #story{
+        height: 100px;
+    }
+
+    #story_img{
+        height: 43%;
+        border-radius: none;
+
+
+
+
+    }
+
+    .feed_div{
+        width: 95%;
+        margin-left: 5px;
+        object-position: center;
+        /* margin-top: 20px; */
+        
+ }
+
+ .saz{
+    font-size: 25px;
+    margin-top: 40px;
+
+
+ }
+
+ button{
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 50%;
+
+ }
+
+   
+
+}
+    </style>
+
+</head>
+
+<body>
+    <div id="main">
+
+        <div id="card">
+            <div id="story_img">
+                
+            </div>  
+            <div id="scories">
+
+                 <div id="story">
+
+                    <div class="box">
+                        <img class="box_image" id="0" src="https://cdn.pixabay.com/photo/2016/11/29/03/15/man-1867009_1280.jpg"
+                            alt="">
+                    </div>
+
+                    <div class="box"><img class="box_image" id="1" src="https://cdn.pixabay.com/photo/2017/04/01/21/06/portrait-2194457_1280.jpg"
+                        alt=""></div>
+
+                    <div class="box"><img class="box_image" id="2" src="https://cdn.pixabay.com/photo/2015/01/07/20/53/hat-591973_1280.jpg"
+                        alt=""></div>
+
+                    <div class="box"><img class="box_image" id="3" src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                        alt=""></div>
+
+                    <div class="box"><img class="box_image" id="4" src="https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267_1280.jpg"
+                        alt=""></div>
+
+                    <div class="box"> <img class="box_image" src="https://cdn.pixabay.com/photo/2023/10/16/10/51/fox-8318961_1280.png"
+                        alt=""></div>
+
+                    <div class="box"> <img class="box_image" src="https://cdn.pixabay.com/photo/2016/07/11/15/43/woman-1509956_1280.jpg"
+                        alt=""></div>
+
+                    <div class="box"> <img class="box_image" src="https://cdn.pixabay.com/photo/2015/07/09/00/29/woman-837156_1280.jpg"
+                        alt=""></div>
+
+                    <div class="box"> <img class="box_image" src="https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg"
+                        alt=""></div>
+
+                    <div class="box"> <img class="box_image" src="https://cdn.pixabay.com/photo/2018/01/06/09/25/hijab-3064633_1280.jpg"
+                        alt=""> </div>
+
+                    <div class="box"> <img class="box_image" src="https://cdn.pixabay.com/photo/2015/06/22/08/37/children-817365_640.jpg"
+                        alt=""> </div>
+
+                    <div class="box"> <img class="box_image" src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg"
+                          alt=""> </div>
+
+                             
+
+                </div> 
+
+            </div> <hr>
+
+
+            
+            <div id="feed">
+
+                <div class="feed_div"> 
+                    <img class="feed_img" src="https://source.unsplash.com/random/?male,4k" alt="">
+                    <p> <i class="fa-solid saz fa-heart" style="color: white"></i></p>
+                <p> <i class="fa-solid saz fa-comment" style="color: white;"></i></p>
+                    <p><i class=" saz fa-solid saz fa-share"></i></p>
+
+                    <button> follow </button>
+                </div>
+
+                <div class="feed_div">
+                    <img class="feed_img" src="https://source.unsplash.com/random/?story,4k" alt="">
+                    <p> <i class="fa-solid saz fa-heart" style="color: white"></i></p>
+                    <p> <i class="fa-solid saz fa-comment" style="color: white;"></i></p>
+                    <p><i class=" saz fa-solid saz fa-share"></i></p>
+                    <button> follow </button>
+                </div>
+
+
+                <div class="feed_div">
+                    <img class="feed_img" src="https://source.unsplash.com/random/?model,4k" alt="">
+                    <p> <i class="fa-solid saz fa-heart" style="color: white"></i></p>
+                    <p> <i class="fa-solid saz fa-comment" style="color: white;"></i></p>
+                    <p><i class=" saz fa-solid saz fa-share"></i></p>
+                    <button> follow </button>
+                </div>
+
+
+                <div class="feed_div"> 
+                    <img class="feed_img" src="https://source.unsplash.com/random/?males,4k" alt="">
+                    <p> <i class="fa-solid saz fa-heart" style="color: white"></i></p>
+                    <p> <i class="fa-solid saz fa-comment" style="color: white;"></i></p>
+                    <p><i class=" saz fa-solid saz fa-share"></i></p>
+                    <button> follow </button>
+                </div>
+
+
+                <div class="feed_div">
+                    <img class="feed_img" src="https://source.unsplash.com/random/?story model,4k" alt="">
+                    <p> <i class="fa-solid saz fa-heart" style="color: white"></i></p>
+                    <p> <i class="fa-solid saz fa-comment" style="color: white;"></i></p>
+                    <p><i class=" saz fa-solid saz fa-share"></i></p>
+                    <button> follow </button>
+                </div>
+
+
+                <div class="feed_div">
+                    <img class="feed_img" src="https://source.unsplash.com/random/?models,4k" alt="">
+                    <p> <i class="fa-solid saz fa-heart" style="color: white"></i></p>
+                    <p> <i class="fa-solid saz fa-comment" style="color: white;"></i></p>
+                    <p><i class=" saz fa-solid saz fa-share"></i></p>
+                    <button> follow </button>
+                </div>
+                
+
+                <div class="feed_div"> 
+                    <img class="feed_img" src="https://source.unsplash.com/random/?statu,4k" alt="">
+                    <p> <i class="fa-solid saz fa-heart" style="color: white"></i></p>
+                    <p> <i class="fa-solid saz fa-comment" style="color: white;"></i></p>
+                    <p><i class=" saz fa-solid saz fa-share"></i></p>
+                    <button> follow </button>
+                </div>
+
+                <div class="feed_div">
+                    <img class="feed_img" src="https://source.unsplash.com/random/?story,4k" alt="">
+                    <p> <i class="fa-solid saz fa-heart" style="color: white"></i></p>
+                    <p> <i class="fa-solid saz fa-comment" style="color: white;"></i></p>
+                    <p><i class=" saz fa-solid saz fa-share"></i></p>
+                    <button> follow </button>
+                </div>
+
+
+                <div class="feed_div">
+                    <img class="feed_img" src="https://source.unsplash.com/random/?toy,4k" alt="">
+                    <p> <i class="fa-solid saz fa-heart" style="color: white"></i></p>
+                    <p> <i class="fa-solid saz fa-comment" style="color: white;"></i></p>
+                    <p><i class=" saz fa-solid saz fa-share"></i></p>
+                    <button> follow </button>
+                </div>
+
+
+                <div class="feed_div"> 
+                    <img class="feed_img" src="https://source.unsplash.com/random/?coding,4k" alt="">
+                    <p> <i class="fa-solid saz fa-heart" style="color: white"></i></p>
+                    <p> <i class="fa-solid saz fa-comment" style="color: white;"></i></p>
+                    <p><i class=" saz fa-solid saz fa-share"></i></p>
+                    <button> follow </button>
+                </div>
+
+
+                <div class="feed_div">
+                    <img class="feed_img" src="https://source.unsplash.com/random/?programming,4k" alt="">
+                    <p> <i class="fa-solid saz fa-heart" style="color: white"></i></p>
+                    <p> <i class="fa-solid saz fa-comment" style="color: white;"></i></p>
+                    <p><i class=" saz fa-solid saz fa-share"></i></p>
+                    <button> follow </button>
+                </div>
+
+                <div class="feed_div">
+                    <img class="feed_img" src="https://source.unsplash.com/random/?ai,4k" alt="">
+                    <p> <i class="fa-solid saz fa-heart" style="color: white"></i></p>
+                    <p> <i class="fa-solid saz fa-comment" style="color: white;"></i></p>
+                    <p><i class=" saz fa-solid saz fa-share"></i></p>
+                    <button> follow </button>
+                </div>
+            
+            </div>
+
+               
+
+            
+
+        </div>
+
+        
+
+        </div>
+
+    
+    <script> 
+    
+
+
+
+
+ let story_value = document.querySelector("#story");
+ console.log(story_value);
+
+ story_value.addEventListener("click", function(dats){
+    
+
+   let story_img =  document.querySelector("#story_img");
+   story_img.style.display = "block";
+   story_img.style.backgroundImage = `url(https://source.unsplash.com/random/?Model,)`;
+
+
+  setInterval(() => {
+    story_img.style.display="none"
+    location.reload();
+
+    
+  },5000);
+
+ });
+
+  
+
+ // icons 
+
+ let like = document.querySelectorAll(".fa-heart");
+
+ for (let i=0 ;i<like.length;i++){
+    
+    like[i].addEventListener("click", ()=>{
+        like[i].style.color = "red"
+    
+    });
+ }
+
+ let commant = document.querySelectorAll(".fa-comment");
+
+for (let i=0 ;i<commant.length;i++){
+    
+    commant[i].addEventListener("click", ()=>{
+        
+        if (confirm("are you comment on this post!") == true) {
+            prompt(" enter your commant ");
+            commant[i].style.color = "green"
+            alert("thanks for command.. ");
+
+         } 
+         
+         else {
+
+               alert("your comment is no send ");
+        }
+        
+    
+    });
+ }
+
+
+let share = document.querySelectorAll(".fa-share");
+for (let i=0 ;i<share.length;i++){
+    
+    share[i].addEventListener("click", ()=>{
+        
+        // window.open('https://web.whatsapp.com://send?text=https://www.instagram.com/rio.coder/');
+        window.open('whatsapp://send?text=https://www.instagram.com/rio.coder/');
+        share[i].style.color = "blue";
+       
+    });
+ }
+
+
+
+ 
+//button 
+const btn = document.querySelectorAll("button");
+let index = 0;
+btn.forEach((item)=>{
+    item.addEventListener("click" ,()=>{
+        if(index == 0){
+            item.innerHTML = "Unfollow";
+            item.style.backgroundColor = "blue";
+            item.style.border = "blue";
+            index = 1;
+
+        }
+
+        else{
+            item.innerHTML = "follow";
+            item.style.backgroundColor = " green";
+            index = 0;
+
+
+
+        }
+
+
+    });
+});
+
+</script>
+</body>
+
+</html>
